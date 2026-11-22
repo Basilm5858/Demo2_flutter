@@ -41,6 +41,8 @@ class LoginPage extends StatelessWidget {
                     email: email.text,
                     password: password.text,
                   );
+                                    if (!context.mounted) return;
+
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
