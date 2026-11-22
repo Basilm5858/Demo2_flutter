@@ -53,6 +53,8 @@ class SignupPage extends StatelessWidget {
                     phone: phone.text,
                     password: password.text,
                   );
+                                    if (!context.mounted) return;
+
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
